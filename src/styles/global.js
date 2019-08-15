@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { backgroundColor } from './colors';
+import { backgroundColor, primaryTextColor } from './colors';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
@@ -19,7 +19,8 @@ export default createGlobalStyle`
     width: 100%;
     height: 100%;
 
-    font: 14px Raleway, sans-serif;
+    font: 16px Raleway, sans-serif;
+    color: ${primaryTextColor};
   }
 
   body {
@@ -28,6 +29,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: ${primaryTextColor};
   }
 
   ul {
