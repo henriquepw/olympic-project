@@ -1,7 +1,19 @@
 import React from 'react';
 
-import { Container } from './styles';
+import meeting from '~/assets/reuniao01.png';
+
+import { Container, Photos } from './styles';
+
+const data = [1, 2, 3, 4, 5, 6];
 
 export default function Gallery() {
-  return <Container>Gallery</Container>;
+  return (
+    <Container>
+      <Photos>
+        {data.map(() => (
+          <img src={meeting} alt="reunião de planegamento" />
+        ))}
+      </Photos>
+    </Container>
+  );
 }
