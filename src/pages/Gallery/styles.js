@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Box } from '~/styles/grids';
 
 export const Container = styled(Box)`
-  margin-top: 100px;
+  margin: 80px auto;
 `;
 
 export const Photos = styled.div`

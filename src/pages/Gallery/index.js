@@ -10,7 +10,7 @@ export default function Gallery() {
   return (
     <Container>
       <Photos>
-        {data.map(() => (
+        {data.map(item => (
           <img src={meeting} alt="reunião de planegamento" />
         ))}
       </Photos>
