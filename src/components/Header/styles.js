@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { primaryColor, secundaryColor, activeTextColor } from '~/styles/colors';
 
@@ -7,46 +8,54 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
+  width: 100%;
   height: 80px;
   max-width: 980px;
   margin: 0 auto;
 
   h1 {
-    font-size: 1.625rem;
+    font-size: 1.65rem;
+    user-select: none;
 
     background: linear-gradient(${primaryColor}, ${secundaryColor});
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
   }
+`;
 
-  aside {
-    a {
-      position: relative;
-      margin: 0 15px;
-      font-size: 1.25rem;
-      transition: all 0.2s;
+export const Button = styled(Link)`
+  position: relative;
+  margin: 0 15px;
+  font-size: 1.25rem;
+  transition: color 0.2s;
 
-      &::before {
-        position: absolute;
-        content: '';
+  &::before {
+    position: absolute;
+    content: '';
 
-        width: 0%;
-        height: 2px;
-        border-radius: 1px;
+    width: 0%;
+    height: 2px;
+    border-radius: 1px;
 
-        bottom: -5px;
+    bottom: -5px;
 
-        background: ${activeTextColor};
-        transition: width 0.2s;
-      }
+    background: ${activeTextColor};
+    transition: width 0.2s;
+  }
 
-      &:hover {
-        color: ${activeTextColor};
+  &:hover {
+    color: ${activeTextColor};
 
-        &::before {
-          width: 100%;
-        }
-      }
+    &::before {
+      width: 100%;
     }
   }
+
+  ${props =>
+    props.selected &&
+    css`
+      color: ${activeTextColor};
+      font-weight: bolder;
+    `}
 `;

@@ -27,6 +27,12 @@ export default createGlobalStyle`
     background: ${backgroundColor};
   }
 
+  #root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+  }
+
   a {
     text-decoration: none;
     color: ${primaryTextColor};
