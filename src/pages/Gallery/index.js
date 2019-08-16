@@ -11,7 +11,7 @@ import { Container, Photos, PopUp } from './styles';
 const data = [1, 2, 3, 4, 5, 6];
 
 export default function Gallery() {
-  const [visibility, setVisibility] = useState(true);
+  const [visibility, setVisibility] = useState(false);
   const [actived, setActived] = useState(0);
 
   function handleOpen(item = actived) {
