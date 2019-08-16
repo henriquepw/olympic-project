@@ -7,12 +7,15 @@ export const Container = styled(Box)`
   h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 36px 0;
+    margin: 30px 0 36px;
   }
 
   p {
     text-align: justify;
     font-size: 1.125rem;
+
+    text-indent: 1.5rem;
+    line-height: 1.5rem;
   }
 
   section {
