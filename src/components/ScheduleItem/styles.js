@@ -70,7 +70,7 @@ export const Container = styled.div`
 
       width: 204px;
       height: 60px;
-      padding: 0 20px;
+      padding: auto 20px;
       text-align: center;
 
       border-radius: 8px;

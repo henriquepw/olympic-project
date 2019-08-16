@@ -16,6 +16,7 @@ export const Container = styled.header`
   h1 {
     font-size: 1.65rem;
     user-select: none;
+    margin-left: 15px;
 
     background: linear-gradient(${primaryColor}, ${secundaryColor});
     -webkit-text-fill-color: transparent;
