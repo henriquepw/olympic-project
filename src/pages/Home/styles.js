@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import { Box } from '~/styles/grids';
-
-export const Container = styled(Box)`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

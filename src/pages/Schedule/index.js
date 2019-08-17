@@ -67,7 +67,10 @@ const advanced = [
 export default function Schedule() {
   return (
     <Container>
-      <h1>Iniciante</h1>
+      <span>
+        <h1>Iniciante</h1>
+        <h2>{process.env.REACT_APP_DATE_BEGINNER}</h2>
+      </span>
       <section>
         {beginner.map((item, index) => (
           <ScheduleItem
@@ -78,7 +81,10 @@ export default function Schedule() {
         ))}
       </section>
 
-      <h1>Avançado</h1>
+      <span>
+        <h1>Avançado</h1>
+        <h2>{process.env.REACT_APP_DATE_ADVANCED}</h2>
+      </span>
       <section>
         {advanced.map((item, index) => (
           <ScheduleItem

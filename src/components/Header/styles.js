@@ -10,18 +10,22 @@ export const Container = styled.header`
 
   width: 100%;
   height: 80px;
-  max-width: 980px;
+  max-width: 1020px;
   margin: 0 auto;
 
   h1 {
     font-size: 1.65rem;
     user-select: none;
-    margin-left: 15px;
+    margin-left: 30px;
 
     background: linear-gradient(${primaryColor}, ${secundaryColor});
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+  }
+
+  aside {
+    margin-right: 15px;
   }
 `;
 

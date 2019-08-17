@@ -9,6 +9,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
+    box-sizing: border-box;
 
     &:hover {
       outline: 0;
@@ -31,6 +32,12 @@ export default createGlobalStyle`
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
+  }
+
+  button {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   a {

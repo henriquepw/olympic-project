@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { randomBytes } from 'crypto';
 import { Container } from './styles';
 
 const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -25,7 +26,7 @@ export default function About() {
           <div>
             <span>
               <img
-                key={item}
+                key={`${item}_${randomBytes(5)}`}
                 src={`https://api.adorable.io/avatars/285/adorable${item}.png`}
                 alt={`adorable${item}`}
               />

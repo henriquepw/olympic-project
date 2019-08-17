@@ -9,13 +9,16 @@ import Footer from '~/components/Footer';
 import Routes from './routes';
 
 import GlobalStyle from '~/styles/global';
+import { Box } from '~/styles/grids';
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
       <Header />
-      <Routes />
+      <Box>
+        <Routes />
+      </Box>
       <Footer />
     </Router>
   );

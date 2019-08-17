@@ -5,7 +5,7 @@ import { Container, Button } from './styles';
 const VALUES = [
   ['/', 'Home'],
   ['/cronograma', 'Cronograma'],
-  ['/galeria', 'Galeria'],
+  // ['/galeria', 'Galeria'],
   ['/sobre', 'Sobre'],
 ];
 

@@ -5,4 +5,9 @@ export const Box = styled.section`
 
   max-width: 980px;
   margin: 0 auto;
+
+  > div {
+    margin: 0 30px;
+    height: 100%;
+  }
 `;

@@ -7,23 +7,32 @@ export const Container = styled(Box)`
   position: relative;
   padding-bottom: 180px;
 
-  h1 {
+  > span {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     width: 500px;
-    height: 70px;
 
     background: ${primaryTextColor};
     color: ${backgroundColor};
 
-    font-size: 2.25rem;
-    border-radius: 8px;
     margin: 80px auto;
+    border-radius: 8px;
+
+    h1 {
+      font-size: 2.25rem;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
   }
 
-  section + h1 {
+  section + span {
     margin-top: 170px;
   }
 

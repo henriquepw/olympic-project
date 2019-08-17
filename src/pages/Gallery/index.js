@@ -5,6 +5,7 @@ import {
   MdKeyboardArrowRight,
 } from 'react-icons/md';
 
+import { randomBytes } from 'crypto';
 import { backgroundColor } from '~/styles/colors';
 import { Container, Photos, PopUp } from './styles';
 
@@ -34,16 +35,20 @@ export default function Gallery() {
   return (
     <Container>
       <Photos>
-        {data.map((_, index) => (
-          <div key={index} onClick={() => handleOpen(index)}>
+        {data.map((item, index) => (
+          <button
+            type="button"
+            key={`${item}_${randomBytes(10)}`}
+            onClick={() => handleOpen(index)}
+          >
             <img
-              src={`https://api.adorable.io/avatars/285/adorable${index}.png`}
+              src={`https://api.adorable.io/avatars/1000/adorable${index}.png`}
               alt="reunião de planegamento"
             />
-          </div>
+          </button>
         ))}
       </Photos>
-      <PopUp visibility={visibility}>
+      <PopUp opened={visibility}>
         <MdKeyboardArrowLeft
           color={backgroundColor}
           onClick={() => handleNext(-1)}

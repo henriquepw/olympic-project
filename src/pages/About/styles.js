@@ -20,7 +20,7 @@ export const Container = styled(Box)`
 
   section {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, auto);
     margin-bottom: 80px;
 
     div {

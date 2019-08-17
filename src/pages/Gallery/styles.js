@@ -10,21 +10,20 @@ export const Container = styled(Box)`
 export const Photos = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
 
-  div {
-    width: 280px;
-    height: 190px;
+  button {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 8px;
-    margin: 15px;
 
     img {
-      border-radius: 8px;
-
-      width: 280px;
-      height: 190px;
+      width: 100%;
+      height: 100%;
       cursor: zoom-in;
       transition: 0.6s;
+      border-radius: 8px;
 
       &:hover {
         transform: scale(1.2);
@@ -48,7 +47,7 @@ export const PopUp = styled.section`
   left: 0;
 
   background: rgba(0, 0, 0, 0.6);
-  visibility: ${props => (props.visibility ? 'visible' : 'hidden')};
+  visibility: ${props => (props.opened ? 'visible' : 'hidden')};
 
   svg {
     width: 80px;
