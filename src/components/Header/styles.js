@@ -1,7 +1,13 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { primaryColor, secundaryColor, activeTextColor } from '~/styles/colors';
+import Media from '~/styles/media';
+import {
+  primaryColor,
+  secundaryColor,
+  activeTextColor,
+  primaryTextColor,
+} from '~/styles/colors';
 
 export const Container = styled.header`
   display: flex;
@@ -22,11 +28,59 @@ export const Container = styled.header`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+
+    z-index: 2;
   }
 
-  aside {
+  svg {
+    display: none;
+    cursor: pointer;
+    user-select: none;
     margin-right: 15px;
+    transition: color 0.2s;
+
+    z-index: 2;
   }
+
+  ${Media.tablet`
+    svg {
+      display: block;
+      color: ${props => (props.opened ? activeTextColor : primaryTextColor)};
+
+      &:hover {
+        color: ${activeTextColor};
+      }
+    }
+  `}
+`;
+
+export const Menu = styled.ul`
+  margin-right: 15px;
+
+  ${Media.tablet`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 100%;
+
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    transition: transform 1s ease-in-out;
+
+    background: #fff;
+    z-index: 1;
+
+    ${props =>
+      props.opened &&
+      css`
+        transform: translateX(-100%);
+      `}
+  `}
 `;
 
 export const Button = styled(Link)`
@@ -63,4 +117,9 @@ export const Button = styled(Link)`
       color: ${activeTextColor};
       font-weight: bolder;
     `}
+
+  ${Media.tablet`
+    font-size: 2rem;
+    margin: 10px auto;
+  `}
 `;
