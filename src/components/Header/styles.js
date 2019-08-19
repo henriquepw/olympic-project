@@ -36,7 +36,7 @@ export const Container = styled.header`
     display: none;
     cursor: pointer;
     user-select: none;
-    margin-right: 15px;
+    margin-right: 30px;
     transition: color 0.2s;
 
     z-index: 2;
@@ -50,6 +50,16 @@ export const Container = styled.header`
       &:hover {
         color: ${activeTextColor};
       }
+    }
+  `}
+
+  ${Media.phone`
+    h1 {
+      margin-left: 15px;
+    }
+
+    svg {
+      margin-right: 15px;
     }
   `}
 `;

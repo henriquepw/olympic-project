@@ -7,6 +7,7 @@ export const Container = styled.footer`
   width: 100%;
   height: 100px;
 
+  text-align: center;
   color: ${secundaryTextColor};
   background: ${linearGradientColor};
 
@@ -44,12 +45,21 @@ export const Container = styled.footer`
             display: none;
           }
 
-          ${Media.bigPhone`
+          ${Media.tablet`
             &.logo {
               display: block;
             }
             &.logotipo {
               display: none;
+            }
+          `}
+
+          ${Media.phone`
+            &.logo {
+              display: none;
+            }
+            &.logotipo {
+              display: block;
             }
           `}
         }
@@ -70,4 +80,20 @@ export const Container = styled.footer`
       }
     }
   }
+
+  ${Media.bigPhone`
+    font-size: 0.9rem;
+  `}
+
+  ${Media.phone`
+    height: auto;
+
+    ul {
+      display: block;
+
+      li {
+        margin: 30px 0;
+      }
+    }
+  `}
 `;

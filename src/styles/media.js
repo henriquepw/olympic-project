@@ -1,9 +1,10 @@
 import { css } from 'styled-components';
 
 export const windows = {
-  smallPhone: 320,
-  phone: 480,
-  bigPhone: 700,
+  smallPhone: 400,
+  phone: 500,
+  bigPhone: 620,
+  smallTablet: 720,
   tablet: 800,
   smallDesktop: 980,
 };
