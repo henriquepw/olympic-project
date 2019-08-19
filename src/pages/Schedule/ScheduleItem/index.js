@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { randomBytes } from 'crypto';
 
 import { Container } from './styles';
 
@@ -8,12 +9,12 @@ export default function ScheduleItem({ data, left, color }) {
     <Container left={left} color={color}>
       <span>
         {data.title.map(item => (
-          <p key={item}>{item}</p>
+          <p key={`${item}_${randomBytes(10)}`}>{item}</p>
         ))}
       </span>
       <aside>
         {data.subject.map(item => (
-          <span key={item}>{item}</span>
+          <span key={`${item}_${randomBytes(10)}`}>{item}</span>
         ))}
       </aside>
     </Container>
