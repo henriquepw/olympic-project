@@ -12,11 +12,11 @@ export default function ScheduleItem({ data, left, color }) {
           <p key={`${item}_${randomBytes(10)}`}>{item}</p>
         ))}
       </span>
-      <aside>
+      <ul>
         {data.subject.map(item => (
-          <span key={`${item}_${randomBytes(10)}`}>{item}</span>
+          <li key={`${item}_${randomBytes(10)}`}>{item}</li>
         ))}
-      </aside>
+      </ul>
     </Container>
   );
 }
