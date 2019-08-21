@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 import { linearGradientColor } from '~/styles/colors';
-import { Box } from '~/styles/grids';
 
-export const Container = styled(Box)`
+export const Container = styled.div`
   h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -20,7 +19,8 @@ export const Container = styled(Box)`
 
   section {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+
     margin-bottom: 80px;
 
     div {
@@ -49,6 +49,12 @@ export const Container = styled(Box)`
 
           border-radius: 50%;
           color: transparent;
+          cursor: pointer;
+          transition: transform 0.2s ease-in;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
