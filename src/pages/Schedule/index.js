@@ -1,6 +1,7 @@
 import React from 'react';
 
-import ScheduleItem from '~/components/ScheduleItem';
+import { randomBytes } from 'crypto';
+import ScheduleItem from './ScheduleItem';
 
 import { cardColors } from '~/styles/colors';
 import { Container } from './styles';
@@ -8,7 +9,7 @@ import { Container } from './styles';
 const beginner = [
   {
     title: ['Problemas', ' Ad-Hoc simples'],
-    subject: ['Condição', 'Repetição', 'Contadores'],
+    subject: ['Introdução a c++', 'Algoritmos basicos', 'recursividade'],
   },
   {
     title: ['Vetores, Matrizes,', 'Strings, busca e', 'ordenação'],
@@ -28,7 +29,7 @@ const beginner = [
   },
   {
     title: ['Grafos'],
-    subject: ['<a definir>', '<a definir>', '<a definir>'],
+    subject: ['Algoritmos classicos', 'Busca', 'Arvore'],
   },
 ];
 
@@ -74,6 +75,7 @@ export default function Schedule() {
       <section>
         {beginner.map((item, index) => (
           <ScheduleItem
+            key={`${item}_${randomBytes(10)}`}
             data={item}
             left={index % 2 !== 0}
             color={cardColors[index + 1]}
@@ -88,6 +90,7 @@ export default function Schedule() {
       <section>
         {advanced.map((item, index) => (
           <ScheduleItem
+            key={`${item}_${randomBytes(10)}`}
             data={item}
             left={index % 2 !== 0}
             color={cardColors[index + 1]}

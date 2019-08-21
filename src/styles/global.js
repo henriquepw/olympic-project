@@ -30,7 +30,7 @@ export default createGlobalStyle`
 
   #root {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 80px 1fr auto;
     grid-template-columns: 1fr;
   }
 

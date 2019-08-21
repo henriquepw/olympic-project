@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Box } from '~/styles/grids';
+import Media, { windows } from '~/styles/media';
 import { backgroundColor, primaryTextColor } from '~/styles/colors';
 
 export const Container = styled(Box)`
@@ -69,5 +70,35 @@ export const Container = styled(Box)`
       background: ${primaryTextColor};
       z-index: -2;
     }
+
+    @media (max-width: ${windows.smallDesktop}px) and (min-width: 621px) {
+      &::before {
+        left: calc(50% - 15px - 145px);
+      }
+
+      &::after {
+        left: calc(50% - 2.5px - 145px);
+      }
+    }
   }
+
+  ${Media.bigPhone`
+      section::before,
+      section::after {
+        top: -60px;
+      }
+
+      > span {
+        width: calc(100% - 30px);
+        max-width: 400px;
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.4rem;
+        }
+      }
+    `}
 `;
