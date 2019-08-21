@@ -82,7 +82,21 @@ export const Container = styled.footer`
   }
 
   ${Media.bigPhone`
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+
+    ul li a {
+      img {
+        height: 50px;
+      }
+
+      svg:first-child {
+        margin-right: -5px;
+      }
+
+      svg {
+        transform: scale(0.8);
+      }
+    }
   `}
 
   ${Media.phone`
@@ -92,7 +106,7 @@ export const Container = styled.footer`
       display: block;
 
       li {
-        margin: 30px 0;
+        padding: 25px 0;
       }
     }
   `}
