@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 import { Container, Menu, Button } from './styles';
@@ -21,7 +22,11 @@ export default function Header() {
 
   return (
     <Container opened={opened}>
-      <h1>Projeto Olímpico</h1>
+      <h1>
+        <Link to="/" onClick={() => handleClick('/')}>
+          Projeto Olímpico
+        </Link>
+      </h1>
       <Menu opened={opened}>
         {VALUES.map(route => (
           <Button
