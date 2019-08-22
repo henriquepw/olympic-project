@@ -1,0 +1,59 @@
+{
+  "beginner": [
+    {
+      "title": ["Problemas", "AD-HOC simples"],
+      "subject": ["Introdução a c++", "Algoritmos basicos", "Problemas de simulação"]
+    },
+    {
+      "title": ["Strings"],
+      "subject": ["Vetores, Matrizes,", "Strings", "Busca e ordenação"]
+    },
+    {
+      "title": ["Estruturas", "de dados"],
+      "subject": ["Pilha", "Fila", "Set e Map"]
+    },
+    {
+      "title": ["Matemática"],
+      "subject": ["Sistemas numéricos", "Números Primos", "BigInteger"]
+    },
+    {
+      "title": ["Paradigmas"],
+      "subject": ["Algoritmos gulosos", "Backtracking", "Programação Dinâmica"]
+    },
+    {
+      "title": ["Grafos", "AD-HOC simples"],
+      "subject": ["Algoritmos classicos", "Busca", "Arvore"]
+    }
+  ],
+  "advanced": [
+    {
+      "title": ["Problemas", "AD-HOC"],
+      "subject": ["Algoritmos sequênciais", "Simulações", "Algoritmos Gulosos"]
+    },
+    {
+      "title": ["Estruturas de", "dados lineares"],
+      "subject": ["Pilha, Fila, Lista, etc", "Ordenação", "Busca"]
+    },
+    {
+      "title": ["Grafos"],
+      "subject": ["Árvores", "Algoritmos clássicos", "Backtracking"]
+    },
+    {
+      "title": ["Estruturas de", "dados não lineares"],
+      "subject": [
+        "Árvores binárias de busca",
+        "Fila de prioridade",
+        "Segment Tree, BIT e etc"
+      ]
+    },
+    {
+      "title": ["Matemática"],
+      "subject": ["Teoria dos números", "Análise combinatória", "Teoria dos jogos"]
+    },
+
+    {
+      "title": ["Programação", "Dinâmica"],
+      "subject": ["Otimização", "Top-down", "Botton-up"]
+    }
+  ]
+}
