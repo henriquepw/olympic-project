@@ -20,7 +20,7 @@ export default function About() {
         produtivo com a computação.
       </p>
 
-      <h2>Equipe</h2>
+      {/* <h2>Equipe</h2>
       <section>
         {data.map(item => (
           <div>
@@ -34,7 +34,7 @@ export default function About() {
             <h4>Nome Sobrenome</h4>
           </div>
         ))}
-      </section>
+      </section> */}
     </Container>
   );
 }
