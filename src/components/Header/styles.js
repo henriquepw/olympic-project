@@ -29,7 +29,12 @@ export const Container = styled.header`
     -webkit-background-clip: text;
     background-clip: text;
 
+    transition: transform 0.2s;
     z-index: 2;
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   svg {
