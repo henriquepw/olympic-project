@@ -7,6 +7,7 @@ export const windows = {
   smallTablet: 720,
   tablet: 800,
   smallDesktop: 980,
+  hd: 1366,
 };
 
 /*
