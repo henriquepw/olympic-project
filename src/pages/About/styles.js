@@ -64,6 +64,6 @@ export const Container = styled.div`
   }
 
   ${Media.bigPhone`
-    height: calc(100vh - 80px) !important;
+    min-height: calc(100vh - 80px) !important;
   `}
 `;
