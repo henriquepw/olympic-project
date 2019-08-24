@@ -11,6 +11,8 @@ export const Container = styled.footer`
   color: ${secundaryTextColor};
   background: ${linearGradientColor};
 
+  z-index: 1;
+
   ul {
     display: flex;
     align-items: center;

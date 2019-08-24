@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 import Media from '~/styles/media';
+import {
+  primaryLightColor,
+  secundaryLightColor,
+  secundaryTextColor,
+  activeTextColor,
+} from '~/styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -8,6 +14,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  padding: 180px 0 55px;
 
   > img {
     width: 250px;
@@ -49,7 +56,53 @@ export const Container = styled.div`
     text-align: center;
   }
 
-  ${Media.tablet`
+  aside {
+    display: flex;
+    align-items: center;
+
+    margin: 40px 0;
+
+    p {
+      margin-right: 10px;
+      font-size: 2rem;
+      color: ${activeTextColor};
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 10px;
+
+      height: 50px;
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+
+      background-size: 200%;
+      background-image: linear-gradient(to left, ${primaryLightColor}, ${secundaryLightColor}, ${primaryLightColor});
+      color: ${secundaryTextColor};
+      font-weight: bold;
+      transition: all 0.6s;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+        background-position: right;
+      }
+
+      &:active {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        transform: translate(2px, 2px);
+      }
+    }
+  }
+
+  ${Media.hd`
     > img {
       width: calc(250px * 0.8);
       height: calc(250px * 0.8);
@@ -71,6 +124,20 @@ export const Container = styled.div`
 
     h2 {
       font-size: calc(2.25rem * 0.8);
+    }
+
+    aside {
+      margin: 30px 0;
+
+      p {
+        margin-right: 10px;
+        font-size: 1.6rem;
+        color: ${activeTextColor};
+      }
+
+      a {
+        transform: scale(0.9);
+      }
     }
   `}
 
@@ -95,6 +162,22 @@ export const Container = styled.div`
 
     h2 {
       font-size: calc(2.25rem * 0.6);
+    }
+
+    aside {
+      flex-direction: column;
+      margin: 30px 0;
+
+      p {
+        margin-bottom: 20px;
+        font-size: calc(2.25rem * 0.6);
+        color: ${activeTextColor};
+        font-weight: bold;
+      }
+
+      a {
+        transform: scale(0.9);
+      }
     }
   `}
 
