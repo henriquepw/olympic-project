@@ -137,6 +137,10 @@ export const Container = styled.div`
 
       a {
         transform: scale(0.9);
+
+        &:active {
+          transform: scale(0.9) translate(2px, 2px);
+        }
       }
     }
   `}
