@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
+import Media from '~/styles/media';
 import { linearGradientColor } from '~/styles/colors';
 
 export const Container = styled.div`
+  padding-bottom: 50px;
+
   h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -14,7 +17,7 @@ export const Container = styled.div`
     font-size: 1.125rem;
 
     text-indent: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
   }
 
   section {
@@ -59,4 +62,8 @@ export const Container = styled.div`
       }
     }
   }
+
+  ${Media.bigPhone`
+    height: calc(100vh - 80px) !important;
+  `}
 `;
