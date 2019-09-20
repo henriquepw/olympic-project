@@ -6,6 +6,7 @@ import { Container, Menu, Button } from './styles';
 
 const VALUES = [
   ['/', 'Home'],
+  ['/selecao', 'Seleção'],
   ['/cronograma', 'Cronograma'],
   // ['/galeria', 'Galeria'],
   ['/sobre', 'Sobre'],
