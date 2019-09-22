@@ -6,6 +6,7 @@ import { Container, Menu, Button } from './styles';
 
 const VALUES = [
   ['/', 'Home'],
+  ['/selecao', 'Seleção'],
   ['/cronograma', 'Cronograma'],
   // ['/galeria', 'Galeria'],
   ['/sobre', 'Sobre'],
@@ -32,6 +33,7 @@ export default function Header() {
           <Button
             key={route[0]}
             to={route[0]}
+            hightlight={route[0] === '/selecao' && page !== route[0]}
             selected={page === route[0]}
             onClick={() => handleClick(route[0])}
           >

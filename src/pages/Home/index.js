@@ -1,6 +1,8 @@
 import React from 'react';
 import { IoLogoWhatsapp } from 'react-icons/io';
 
+import HighlightButton from '~/components/HighlightButton';
+
 import logo from '~/assets/logo.svg';
 import { Container } from './styles';
 
@@ -15,14 +17,12 @@ export default function Home() {
 
       <aside>
         <p>Ficou interessado?</p>
-        <a
-          href={process.env.REACT_APP_GROUP}
-          target="_black"
-          rel="noopener noreferrer"
+        <HighlightButton
+          link={process.env.REACT_APP_GROUP}
+          icon={<IoLogoWhatsapp size={25} />}
         >
-          <IoLogoWhatsapp size={25} />
           Entrar no grupo
-        </a>
+        </HighlightButton>
       </aside>
     </Container>
   );

@@ -7,6 +7,7 @@ import {
   secundaryColor,
   activeTextColor,
   primaryTextColor,
+  backgroundColor,
 } from '~/styles/colors';
 
 export const Container = styled.header`
@@ -102,7 +103,7 @@ export const Button = styled(Link)`
   position: relative;
   margin: 0 15px;
   font-size: 1.25rem;
-  transition: color 0.2s;
+  transition: 0.2s;
 
   &::before {
     position: absolute;
@@ -131,6 +132,45 @@ export const Button = styled(Link)`
     css`
       color: ${activeTextColor};
       font-weight: bolder;
+    `}
+
+  ${props =>
+    props.hightlight &&
+    css`
+      animation: neon 2s infinite;
+      padding: 8px 12px;
+      transition: none;
+
+      &:hover {
+        &::before {
+          width: 0%;
+        }
+      }
+
+      @keyframes neon {
+        0% {
+          background: ${activeTextColor};
+          color: ${backgroundColor};
+
+          border-radius: 5px;
+          box-shadow: 0 0 10px ${activeTextColor}, 0 0 20px ${activeTextColor};
+        }
+        20% {
+          background: transparent;
+          box-shadow: none;
+        }
+        40% {
+          background: ${activeTextColor};
+          color: ${backgroundColor};
+
+          border-radius: 5px;
+          box-shadow: 0 0 10px ${activeTextColor}, 0 0 20px ${activeTextColor};
+        }
+        50% {
+          background: transparent;
+          box-shadow: none;
+        }
+      }
     `}
 
   ${Media.tablet`
