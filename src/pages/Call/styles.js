@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
 
+import HighlightButton from '~/components/HighlightButton';
+
+import Media from '~/styles/media';
 import { activeTextColor } from '~/styles/colors';
 
 export const Container = styled.div`
@@ -22,6 +25,24 @@ export const Container = styled.div`
       padding-top: 70px;
     }
   }
+
+  ${Media.hd`
+    h1 {
+      font-size: calc(2.25rem * 0.9);
+    }
+  `}
+
+  ${Media.tablet`
+    h1 {
+      font-size: calc(2.25rem * 0.8);
+    }
+  `}
+
+  ${Media.bigPhone`
+    h1 {
+      font-size: calc(2.25rem * 0.6);
+    }
+  `}
 `;
 
 export const Item = styled.li`
@@ -55,4 +76,34 @@ export const Item = styled.li`
         text-align: right;
       `}
   }
+
+  ${Media.hd`
+    p {
+      font-size: calc(1.7rem * 0.9);
+    }
+  `}
+
+  ${Media.tablet`
+    p {
+      font-size: calc(1.7rem * 0.8);
+    }
+
+    img {
+      transform: scale(0.8);
+    }
+  `}
+
+  ${Media.bigPhone`
+    p {
+      font-size: calc(1.7rem * 0.6);
+    }
+  `}
+`;
+
+export const Button = styled(HighlightButton)`
+  max-width: 180px;
+  margin: auto;
+  margin-top: 100px;
+
+  letter-spacing: 2px;
 `;

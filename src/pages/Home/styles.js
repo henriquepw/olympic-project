@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
 import Media from '~/styles/media';
-import {
-  primaryLightColor,
-  secundaryLightColor,
-  secundaryTextColor,
-  activeTextColor,
-} from '~/styles/colors';
+import { activeTextColor } from '~/styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -67,39 +62,6 @@ export const Container = styled.div`
       font-size: 2rem;
       color: ${activeTextColor};
     }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      margin: 0 10px;
-
-      height: 50px;
-      padding: 20px;
-      border-radius: 25px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-
-      background-size: 200%;
-      background-image: linear-gradient(to left, ${primaryLightColor}, ${secundaryLightColor}, ${primaryLightColor});
-      color: ${secundaryTextColor};
-      font-weight: bold;
-      transition: all 0.6s;
-
-      svg {
-        margin-right: 10px;
-      }
-
-      &:hover {
-        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
-        background-position: right;
-      }
-
-      &:active {
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-        transform: translate(2px, 2px);
-      }
-    }
   }
 
   ${Media.hd`
@@ -133,10 +95,6 @@ export const Container = styled.div`
         margin-right: 10px;
         font-size: 1.6rem;
         color: ${activeTextColor};
-      }
-
-      a {
-        transform: scale(0.9);
       }
     }
   `}
@@ -173,10 +131,6 @@ export const Container = styled.div`
         font-size: calc(2.25rem * 0.6);
         color: ${activeTextColor};
         font-weight: bold;
-      }
-
-      a {
-        transform: scale(0.9);
       }
     }
   `}

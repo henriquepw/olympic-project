@@ -5,7 +5,7 @@ import calendar from '~/assets/calendar.svg';
 import trophy from '~/assets/trophy.svg';
 import support from '~/assets/support.png';
 
-import { Container, Item } from './styles';
+import { Container, Item, Button } from './styles';
 
 export default function Call() {
   return (
@@ -13,6 +13,8 @@ export default function Call() {
       <h1>
         {'Seleção para Time Olímpico de Programação do IFPB CG - '}
         <strong>Nível Superior</strong>
+        <br />
+        Prova dia 02 de outubro
       </h1>
 
       <ul>
@@ -47,6 +49,8 @@ export default function Call() {
             presenciais e à distância)
           </p>
         </Item>
+
+        <Button link="https://forms.gle/3khRQn6iKCdp8Bur9">INSCREVER</Button>
       </ul>
     </Container>
   );

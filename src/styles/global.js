@@ -11,6 +11,8 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
 
+    -webkit-font-smoothing: antialiased;
+
     &:hover {
       outline: 0;
     }
