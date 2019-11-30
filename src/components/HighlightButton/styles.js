@@ -33,7 +33,7 @@ export const Container = styled.a`
   );
   color: ${secundaryTextColor};
   font-weight: bold;
-  transition: all 0.6s;
+  transition: all 0.3s;
 
   svg {
     margin-right: 10px;
@@ -51,5 +51,9 @@ export const Container = styled.a`
 
   ${Media.hd`
     transform: scale(0.9) translate(2px, 2px);
+
+    &:active {
+      transform: scale(0.9) translate(4px, 4px);
+    }
   `}
 `;

@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { backgroundColor, primaryTextColor } from './colors';
+import {
+  backgroundColor,
+  primaryTextColor,
+  primaryLightColor,
+  secundaryTextColor,
+} from './colors';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
@@ -15,6 +20,11 @@ export default createGlobalStyle`
 
     &:hover {
       outline: 0;
+    }
+
+    &::selection{
+      background-color: ${primaryLightColor};
+      color: ${secundaryTextColor};
     }
   }
 
