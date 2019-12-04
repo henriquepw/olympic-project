@@ -10,6 +10,7 @@ const VALUES = [
   ['/cronograma', 'Cronograma'],
   // ['/galeria', 'Galeria'],
   ['/sobre', 'Sobre'],
+  // ['/evento', 'Evento'],
 ];
 
 export default function Header() {
@@ -33,7 +34,7 @@ export default function Header() {
           <Button
             key={route[0]}
             to={route[0]}
-            hightlight={route[0] === '/selecao' && page !== route[0]}
+            hightlight={route[0] === '/evento' && page !== route[0]}
             selected={page === route[0]}
             onClick={() => handleClick(route[0])}
           >

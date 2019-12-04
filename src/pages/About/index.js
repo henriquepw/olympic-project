@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import { randomBytes } from 'crypto';
 import { Container } from './styles';
 
 import Team from './Team';
@@ -20,9 +19,9 @@ export default function About() {
         para a Olimpíada Paraibana de Informática (OPI) e para a Olimpíada
         Brasileira de Informática (OBI), partindo do pressuposto de que os
         conteúdos cobrados nessas olimpíadas são de grande relevância na ciência
-        da computação e queo ambiente de competição incentiva os participantes a
-        evoluírem rapidamente. O projeto possibilita a alunos da rede pública um
-        primeiro contato produtivo com a computação, e aos alunos do IFPB o
+        da computação e que o ambiente de competição incentiva os participantes
+        a evoluírem rapidamente. O projeto possibilita a alunos da rede pública
+        um primeiro contato produtivo com a computação, e aos alunos do IFPB o
         desenvolvimento de habilidades básicas e avançadas de programação.
       </p>
 

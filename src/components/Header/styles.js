@@ -8,6 +8,7 @@ import {
   activeTextColor,
   primaryTextColor,
   backgroundColor,
+  secundaryTextColor,
 } from '~/styles/colors';
 
 export const Container = styled.header`
@@ -101,7 +102,7 @@ export const Menu = styled.ul`
 
 export const Button = styled(Link)`
   position: relative;
-  margin: 0 15px;
+  margin-left: 45px;
   font-size: 1.25rem;
   transition: 0.2s;
 
@@ -137,38 +138,16 @@ export const Button = styled(Link)`
   ${props =>
     props.hightlight &&
     css`
-      animation: neon 2s infinite;
-      padding: 8px 12px;
-      transition: none;
+      padding: 8px 20px;
+      border: 2px solid ${activeTextColor};
+      border-radius: 24px;
 
       &:hover {
+        background: ${activeTextColor};
+        color: ${secundaryTextColor};
+
         &::before {
           width: 0%;
-        }
-      }
-
-      @keyframes neon {
-        0% {
-          background: ${activeTextColor};
-          color: ${backgroundColor};
-
-          border-radius: 5px;
-          box-shadow: 0 0 10px ${activeTextColor}, 0 0 20px ${activeTextColor};
-        }
-        20% {
-          background: transparent;
-          box-shadow: none;
-        }
-        40% {
-          background: ${activeTextColor};
-          color: ${backgroundColor};
-
-          border-radius: 5px;
-          box-shadow: 0 0 10px ${activeTextColor}, 0 0 20px ${activeTextColor};
-        }
-        50% {
-          background: transparent;
-          box-shadow: none;
         }
       }
     `}

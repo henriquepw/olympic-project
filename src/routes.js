@@ -6,6 +6,7 @@ import Home from '~/pages/Home';
 import About from '~/pages/About';
 import Gallery from '~/pages/Gallery';
 import Schedule from '~/pages/Schedule';
+import Event from '~/pages/Event';
 
 export default function Router() {
   return (
@@ -15,6 +16,7 @@ export default function Router() {
       {/* <Route path="/selecao" component={Call} /> */}
       <Route path="/galeria" component={Gallery} />
       <Route path="/cronograma" component={Schedule} />
+      <Route path="/evento" component={Event} />
     </Switch>
   );
 }
