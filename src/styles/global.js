@@ -15,6 +15,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    transition: 0.2s;
 
     -webkit-font-smoothing: antialiased;
 
@@ -28,7 +29,7 @@ export default createGlobalStyle`
     }
   }
 
-  html, body, #root {
+  html, body {
     width: 100%;
     height: 100%;
 
@@ -41,9 +42,11 @@ export default createGlobalStyle`
   }
 
   #root {
-    display: grid;
-    grid-template-rows: 80px 1fr auto;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100%;
   }
 
   button {
