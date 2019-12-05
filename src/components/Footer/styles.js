@@ -6,6 +6,7 @@ import { linearGradientColor, secundaryTextColor } from '~/styles/colors';
 export const Container = styled.footer`
   width: 100%;
   height: 100px;
+  margin-top: auto;
 
   text-align: center;
   color: ${secundaryTextColor};

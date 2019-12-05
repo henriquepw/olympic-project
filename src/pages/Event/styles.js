@@ -1,25 +1,23 @@
 import styled from 'styled-components';
-import { activeTextColor } from '~/styles/colors';
 
 import HighlightButton from '~/components/HighlightButton';
 
+import { activeTextColor } from '~/styles/colors';
+import Media from '~/styles/media';
+
 export const Container = styled.div`
   min-height: 100%;
+  margin: 0 30px 50px !important;
 
-  h2 {
-    margin-top: 20px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-    text-align: center;
-    margin: 30px 0 50px;
+  h3 {
+    font-size: 1.6em;
+    color: ${activeTextColor};
   }
 
   p {
     margin: 1em 0;
     font-size: 1.1rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 
   strong {
@@ -27,22 +25,68 @@ export const Container = styled.div`
   }
 
   section {
-    display: flex;
-    align-items: center;
-    margin-top: 0px;
+    > div {
+      margin: 80px 0;
+    }
+  }
+`;
 
-    img {
-      padding: 0 40px;
-      width: 450px;
+export const Description = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 276px;
+  margin-top: 40px;
+
+  img {
+    padding: 0 40px;
+    height: 100%;
+    max-height: 250px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 100%;
+
+    h3 {
+      margin-top: 10px;
     }
   }
 
-  & > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
-  }
+  ${Media.tablet`
+    img {
+      height: 200px;
+    }
+
+    div {
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  `}
+
+  ${Media.smallTablet`
+    img {
+      height: 180px;
+    }
+
+    div {
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  `}
 `;
 
 export const Button = styled(HighlightButton)`
