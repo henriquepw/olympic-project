@@ -29,17 +29,20 @@ export const Container = styled.div`
       margin: 80px 0;
     }
   }
+
+  ${Media.smallTablet`
+    margin-bottom: 90px !important;
+  `}
 `;
 
 export const Description = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  height: 276px;
   margin-top: 40px;
 
   img {
-    padding: 0 40px;
+    padding-right: 40px;
     height: 100%;
     max-height: 250px;
   }
@@ -84,6 +87,31 @@ export const Description = styled.div`
 
       p {
         font-size: 1rem;
+      }
+    }
+  `}
+
+  ${Media.bigPhone`
+    img {
+      position: absolute;
+    }
+
+    div {
+      p {
+        margin-left: 248.563px;
+      }
+    }
+  `}
+
+  ${Media.phone`
+    img {
+      display: none;
+    }
+
+    div {
+      p {
+        margin-top: 30px;
+        margin-left: 0;
       }
     }
   `}
