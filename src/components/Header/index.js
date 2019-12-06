@@ -10,7 +10,7 @@ const VALUES = [
   ['/cronograma', 'Cronograma'],
   // ['/galeria', 'Galeria'],
   ['/sobre', 'Sobre'],
-  // ['/evento', 'Evento'],
+  ['/evento', 'Evento'],
 ];
 
 export default function Header() {

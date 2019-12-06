@@ -43,7 +43,9 @@ export default function Event() {
           />
         </div>
       </section>
-      <Button link="#">Inscreva-se</Button>
+      <Button link="https://docs.google.com/forms/d/e/1FAIpQLScjetVqHaj9hvW3QfTM02_diGOeqW_w6ztlRGWdIgWI259acw/viewform">
+        Inscreva-se
+      </Button>
     </Container>
   );
 }

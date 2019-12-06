@@ -7,7 +7,6 @@ import {
   secundaryColor,
   activeTextColor,
   primaryTextColor,
-  backgroundColor,
   secundaryTextColor,
 } from '~/styles/colors';
 
